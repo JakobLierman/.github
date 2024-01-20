@@ -3,6 +3,14 @@ name: Update copyright year(s) in license file
 on:
   schedule:
     - cron: '0 3 1 1 *' # 03:00 AM on January 1
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+   inputs:
+     debug:
+        description: 'Dry run'
+        type: boolean
+        required: true
+        default: true
 
 permissions:
   contents: write
