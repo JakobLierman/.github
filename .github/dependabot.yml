@@ -1,0 +1,118 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "JakobLierman"
+    commit-message:
+      prefix: chore
+      include: scope
+    target-branch: "develop"
+    labels:
+      - "Dependencies"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "JakobLierman"
+    commit-message:
+      prefix: chore
+      include: scope
+    target-branch: "develop"
+    labels:
+      - "Dependencies"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+  - package-ecosystem: "pub"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "JakobLierman"
+    commit-message:
+      prefix: chore
+      include: scope
+    target-branch: "develop"
+    labels:
+      - "Dependencies"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+  - package-ecosystem: "swift"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "JakobLierman"
+    commit-message:
+      prefix: chore
+      include: scope
+    target-branch: "develop"
+    labels:
+      - "Dependencies"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "JakobLierman"
+    commit-message:
+      prefix: chore
+      include: scope
+    labels:
+      - "Dependencies"
+    target-branch: "develop"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "JakobLierman"
+    commit-message:
+      prefix: chore
+      include: scope
+    target-branch: "develop"
+    labels:
+      - "Dependencies"
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
+
+registries:
+  npm-github:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{secrets.GITHUB_TOKEN}}
+    replaces-base: true
