@@ -99,7 +99,7 @@ labels:
       description: Task is considered lower-priority.
 
     - name: 'Dependencies'
-      color: e88707
+      color: 4CAF50
       description: Dependency related changes.
 
     - name: 'Documentation'

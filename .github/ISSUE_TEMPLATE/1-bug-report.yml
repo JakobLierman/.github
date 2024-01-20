@@ -23,8 +23,8 @@ body:
       description: Did this behaviour used to work in the previous version?
       multiple: false
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: textarea
